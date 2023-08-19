@@ -1,0 +1,41 @@
+{
+  "name": "@react-hook-ts/use-media-query",
+  "version": "1.0.0",
+  "description": "This react hook provide the state and the orientation of the screen",
+  "author": "Keized",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-hook",
+    "react hook",
+    "hook",
+    "react media query",
+    "media query hook",
+    "media query",
+    "screen orientation hook",
+    "breakpoints hook",
+    "react breakpoints",
+    "react screen"
+  ],
+  "repository": "https://github.com/Keized/react-hook-ts",
+  "homepage": "https://github.com/Keized/react-hook-ts/blob/master/packages/use-media-query/README.md",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --declaration"
+  },
+  "dependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0",
+    "use-debounce": "^9.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "typescript": "^5.1.6"
+  },
+  "files": [
+    "dist"
+  ]
+}
