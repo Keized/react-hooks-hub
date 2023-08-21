@@ -1,5 +1,5 @@
 {
-  "name": "@react-hook-ts/use-media-query",
+  "name": "@react-hooks-hub/use-media-query",
   "version": "1.0.0",
   "description": "This react hook provide the state and the orientation of the screen",
   "author": "Keized",
@@ -17,8 +17,8 @@
     "react breakpoints",
     "react screen"
   ],
-  "repository": "https://github.com/Keized/react-hook-ts",
-  "homepage": "https://github.com/Keized/react-hook-ts/blob/master/packages/use-media-query/README.md",
+  "repository": "https://github.com/Keized/react-hooks-hub",
+  "homepage": "https://github.com/Keized/react-hooks-hub/blob/master/packages/use-media-query/README.md",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
