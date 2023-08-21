@@ -1,6 +1,6 @@
 {
   "name": "@react-hooks-hub/use-media-query",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This react hook provide the state and the orientation of the screen",
   "author": "Keized",
   "license": "MIT",
