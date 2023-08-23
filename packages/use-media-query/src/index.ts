@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect, useCallback, useMemo } from 'react';
+import { useState, useLayoutEffect, useCallback } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
 
 const defaultBreakpoints = { desktop: 992, tablet: 768, mobile: 0 };
@@ -60,4 +60,4 @@ export function useMediaQuery<T extends Breakpoints = typeof defaultBreakpoints>
     }, [update, debounced]);
 
     return { device, orientation };
-};
+}

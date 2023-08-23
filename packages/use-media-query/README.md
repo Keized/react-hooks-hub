@@ -54,7 +54,6 @@ Custom Screen Sizes
 You can define custom screen sizes in the breakpoints option:
 
 ```jsx
-Copy code
 const { device } = useMediaQuery({
   breakpoints: { desktop: 1200, tablet: 768, mobile: 0, custom: 1500 }
 });
