@@ -23,7 +23,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc --declaration",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "jest test --coverage"
   },
   "dependencies": {
     "react": ">=16.0.0",
