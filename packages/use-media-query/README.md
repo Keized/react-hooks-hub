@@ -1,6 +1,23 @@
+
+<h1 align="center">Use Media Query</h1>
+
+<p align="center">
+  `@react-hooks-hub/use-media-query` is a custom React hook that provides the state of the screen's device type (desktop, tablet, mobile) and orientation (portrait, landscape). It's designed to create responsive interfaces and adapt content based on screen size.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/actions/workflow/status/Keized/react-hooks-hub/use-media-query.yml?style=for-the-badge" alt="CI status" />
+  &nbsp;
+  <img src="https://img.shields.io/codecov/c/github/keized/react-hooks-hub?flag=use-media-query&style=for-the-badge" alt="Coverage" />
+  &nbsp;
+  <img src="https://img.shields.io/bundlephobia/minzip/@react-hooks-hub/use-media-query?style=for-the-badge" alt="Bundlephobia" />
+  &nbsp;
+</p>
+
+
+
 # @react-hooks-hub/use-media-query
 
-`@react-hooks-hub/use-media-query` is a custom React hook that provides the state of the screen's device type (desktop, tablet, mobile) and orientation (portrait, landscape). It's designed to create responsive interfaces and adapt content based on screen size.
 
 ## Installation
 
