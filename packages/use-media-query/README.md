@@ -1,11 +1,18 @@
 
 <h1 align="center">Use Media Query</h1>
+<br />
 
 <p align="center">
-  `@react-hooks-hub/use-media-query` is a custom React hook that provides the state of the screen's device type (desktop, tablet, mobile) and orientation (portrait, landscape). It's designed to create responsive interfaces and adapt content based on screen size.
+  <strong>@react-hooks-hub/use-media-query</strong> is a custom React hook that provides the state of the screen's device type (desktop, tablet, mobile) and orientation (portrait, landscape). It's designed to create responsive interfaces and adapt content based on screen size.
 </p>
 
+<br />
+
 <p align="center">
+  <a href="https://www.npmjs.com/package/@react-hooks-hub/use-media-query" title="use-media-query on NPM">
+  <img src="https://img.shields.io/npm/v/@react-hooks-hub/use-media-query.svg?style=for-the-badge" alt="NPM version" />
+  </a>
+  &nbsp;
   <img src="https://img.shields.io/github/actions/workflow/status/Keized/react-hooks-hub/use-media-query.yml?style=for-the-badge" alt="CI status" />
   &nbsp;
   <img src="https://img.shields.io/codecov/c/github/keized/react-hooks-hub?flag=use-media-query&style=for-the-badge" alt="Coverage" />
@@ -14,10 +21,8 @@
   &nbsp;
 </p>
 
-
-
-# @react-hooks-hub/use-media-query
-
+<br />
+<br />
 
 ## Installation
 
