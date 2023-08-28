@@ -1,6 +1,6 @@
 {
   "name": "@react-hooks-hub/use-debounce",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This react hook provide a way to delay execution of functions, enhancing user experience and performance.",
   "author": "Keized <kevin.fiseneck@live.fr>",
   "license": "MIT",
@@ -15,14 +15,22 @@
   ],
   "repository": "https://github.com/Keized/react-hooks-hub",
   "homepage": "https://github.com/Keized/react-hooks-hub/blob/main/packages/use-debounce/README.md",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "exports": {
+      ".": {
+          "import": "./dist/esm/index.js",
+          "require": "./dist/cjs/index.js"
+      },
+      "./package.json": "./package.json"
+  },  
   "scripts": {
-    "build": "tsc --declaration",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && tsc -p tsconfig-types.json",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest test --coverage"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": ">=16.0.0",
     "react-dom": ">=16.0.0"
   },
