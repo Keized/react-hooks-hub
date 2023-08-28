@@ -5,9 +5,7 @@ module.exports = async () => {
       verbose: true,
       transform: {
         "^.+\\.ts?$": "ts-jest",
-        "^.+\\.js?$": "babel-jest"
       },
-      testEnvironment: "jsdom",
-      transformIgnorePatterns: ['//node_modules']
+      testEnvironment: "jsdom"
     };
 };
