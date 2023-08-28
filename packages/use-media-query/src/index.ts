@@ -1,5 +1,5 @@
 import { useState, useLayoutEffect, useCallback } from 'react';
-import { useDebouncedCallback } from 'use-debounce';
+import { useDebounce } from '@react-hooks-hub/use-debounce';
 
 const defaultBreakpoints = { desktop: 992, tablet: 768, mobile: 0 };
 
@@ -47,7 +47,7 @@ export function useMediaQuery<T extends Breakpoints = typeof defaultBreakpoints>
         }
     }, [breakpointNames, breakpoints]);
 
-    const debounced = useDebouncedCallback(update, debounceDelay);
+    const debounced = useDebounce(update, debounceDelay);
 
     useLayoutEffect(() => {
         update();

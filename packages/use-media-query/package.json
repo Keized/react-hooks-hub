@@ -1,6 +1,6 @@
 {
   "name": "@react-hooks-hub/use-media-query",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "This react hook provide the state and the orientation of the screen",
   "author": "Keized <kevin.fiseneck@live.fr>",
   "license": "MIT",
@@ -27,7 +27,7 @@
     "test": "jest test --coverage"
   },
   "dependencies": {
-    "use-debounce": "^9.0.4"
+    "@react-hooks-hub/use-debounce": "^1.0.0"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
@@ -44,6 +44,7 @@
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "^6.4.1",
+    "babel-jest": "^29.6.4",
     "eslint": "^8.47.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
