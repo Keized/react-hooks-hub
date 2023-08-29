@@ -1,6 +1,6 @@
 {
   "name": "@react-hooks-hub/use-media-query",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "This react hook provide the state and the orientation of the screen",
   "author": "Keized <kevin.fiseneck@live.fr>",
   "license": "MIT",
@@ -19,13 +19,19 @@
   ],
   "repository": "https://github.com/Keized/react-hooks-hub",
   "homepage": "https://github.com/Keized/react-hooks-hub/blob/master/packages/use-media-query/README.md",
-  "types": "./dist/types/index.js",
+  "types": "dist/types/index.d.ts",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "exports": {
       ".": {
-          "import": "./dist/esm/index.js",
-          "require": "./dist/cjs/index.js"
+          "import": {
+            "types": "./dist/types/index.d.ts",
+            "default": "./dist/esm/index.js"
+          },
+          "require": {
+            "types": "./dist/types/index.d.ts",
+            "default": "./dist/cjs/index.js"
+          }
       },
       "./package.json": "./package.json"
   },  
@@ -63,6 +69,7 @@
     "typescript": "^5.1.6"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ]
 }
