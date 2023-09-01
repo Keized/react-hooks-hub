@@ -6,7 +6,7 @@ import { useRef, useEffect } from 'react';
  * @param delay The delay time in milliseconds.
  * @returns A debounced version of the provided function.
  */
-export function useDebounce<T extends any[]>(callback: Function, delay: number) {
+export function useDebounce<T extends any[]>(callback: (...args: T) => void, delay: number) {
     const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const callbackRef = useRef<Function>(callback);
     const isMountedRef = useRef<boolean>(true);

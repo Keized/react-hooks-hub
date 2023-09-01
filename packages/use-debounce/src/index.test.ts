@@ -1,6 +1,8 @@
 import {  cleanup, act, renderHook } from '@testing-library/react';
 import { useDebounce } from './index';
 
+jest.useFakeTimers();
+
 describe('useDebounce', () => {
     afterEach(cleanup);
 
@@ -16,7 +18,7 @@ describe('useDebounce', () => {
             result.current('third call');
         })
 
-        await new Promise(resolve => setTimeout(resolve, delay));
+        jest.advanceTimersByTime(delay);
 
         expect(callback).toHaveBeenCalledTimes(1);
         expect(callback).toHaveBeenCalledWith('third call');
