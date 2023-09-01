@@ -1,0 +1,37 @@
+name: use-throttle
+ 
+on:  
+  push:
+  pull_request:
+    branches:
+      - master
+ 
+jobs:
+  build:
+    name: use-throttle
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+ 
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./packages/use-throttle
+
+      - name: Run tests
+        run: npm run test
+        working-directory: ./packages/use-throttle
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          flags: use-throttle
+        env: 
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

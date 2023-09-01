@@ -16,3 +16,4 @@
 |----|---|---|
 | [useMediaQuery()](https://github.com/Keized/react-hooks-hub/blob/main/packages/use-media-query/README.md)  | It provides the state of the screen's device type (desktop, tablet, mobile) and orientation (portrait, landscape) | ![Build](https://img.shields.io/github/actions/workflow/status/Keized/react-hooks-hub/use-media-query.yml?style=for-the-badge) |
 | [useDebounce()](https://github.com/Keized/react-hooks-hub/blob/main/packages/use-debounce/README.md)  | It provides a way to delay execution of functions | ![Build](https://img.shields.io/github/actions/workflow/status/Keized/react-hooks-hub/use-debounce.yml?style=for-the-badge) |
+| [useThrottle()](https://github.com/Keized/react-hooks-hub/blob/main/packages/use-throttle/README.md)  | It provides a way to limit the rate at which a function can be called | ![Build](https://img.shields.io/github/actions/workflow/status/Keized/react-hooks-hub/use-throttle.yml?style=for-the-badge) |
