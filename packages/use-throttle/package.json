@@ -1,7 +1,7 @@
 {
   "name": "@react-hooks-hub/use-throttle",
-  "version": "1.0.0",
-  "description": "This react hook provide a way to delay execution of functions, enhancing user experience and performance.",
+  "version": "1.0.1",
+  "description": "This hook provide a way to control and limit the rate at which a function can be called.",
   "author": "Keized <kevin.fiseneck@live.fr>",
   "license": "MIT",
   "keywords": [
