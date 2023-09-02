@@ -1,6 +1,6 @@
 {
   "name": "@react-hooks-hub/use-throttle",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This hook provide a way to control and limit the rate at which a function can be called.",
   "author": "Keized <kevin.fiseneck@live.fr>",
   "license": "MIT",
