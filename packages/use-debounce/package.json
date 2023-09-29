@@ -1,6 +1,6 @@
 {
   "name": "@react-hooks-hub/use-debounce",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "This react hook provide a way to delay execution of functions, enhancing user experience and performance.",
   "author": "Keized <kevin.fiseneck@live.fr>",
   "license": "MIT",
