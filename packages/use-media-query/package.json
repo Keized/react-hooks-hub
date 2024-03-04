@@ -1,6 +1,6 @@
 {
   "name": "@react-hooks-hub/use-media-query",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "This react hook provide the state and the orientation of the screen",
   "author": "Keized <kevin.fiseneck@live.fr>",
   "license": "MIT",
@@ -42,7 +42,7 @@
     "prepare": "npm run build"
   },
   "dependencies": {
-    "@react-hooks-hub/use-debounce": "^1.1.5"
+    "@react-hooks-hub/use-debounce": "^1.1.7"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
