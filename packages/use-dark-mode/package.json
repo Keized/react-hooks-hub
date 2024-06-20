@@ -1,6 +1,6 @@
 {
   "name": "@react-hooks-hub/use-dark-mode",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A React hook to manage dark mode and light mode with persistence.",
   "author": "Keized <kevin.fiseneck@live.fr>",
   "license": "MIT",

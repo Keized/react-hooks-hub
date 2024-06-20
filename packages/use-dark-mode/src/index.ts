@@ -17,18 +17,22 @@ const defaultConfig = {
 }
 
 export function useDarkMode(userConfig?: Config): { switchMode: (mode: Mode) => void,  darkMode: boolean } {
-    const schemeMedia = useRef(window.matchMedia(`(prefers-color-scheme: dark)`));
+    const isBrowser = typeof window !== 'undefined';
+    const schemeMedia = useRef<MediaQueryList | null>(isBrowser ? window.matchMedia('(prefers-color-scheme: dark)') : null);
+
     const {persistance, storageKey, defaultMode} = { ...defaultConfig, ...userConfig }
 
     const getInitialMode = useMemo((): boolean => {
+        if (!isBrowser) return defaultMode === 'dark';
+
         if (persistance) {
             const persistedValue = localStorage.getItem(storageKey);
-            if (persistedValue && ['dark', 'light'].includes(persistedValue)) {
+            if (persistedValue === 'dark' || persistedValue === 'light') {
                 return persistedValue === 'dark';
             } 
         }
 
-        if (defaultMode === 'system') return schemeMedia.current.matches;
+        if (defaultMode === 'system') return schemeMedia.current?.matches || false;
 
         return defaultMode === 'dark';
     }, [])
@@ -36,28 +40,28 @@ export function useDarkMode(userConfig?: Config): { switchMode: (mode: Mode) => 
     const [darkMode, setDarkMode] = useState(getInitialMode);
 
     const switchMode = (mode: Mode) => {
+        if (!isBrowser) return;
+
         if (mode === 'system') {
-            setSystemScheme();
+            setDarkMode(schemeMedia.current?.matches ?? false);
             localStorage.removeItem(storageKey);
-            return;
+        } else {
+            setDarkMode(mode === 'dark');
+            if (persistance) {
+              localStorage.setItem(storageKey, mode);
+            }
         }
-
-        setDarkMode(prev => !prev);        
-        if (persistance) {
-            localStorage.setItem(storageKey, darkMode ? 'dark' : 'light');
-        }
-    }
-
-    const setSystemScheme = () =>  {
-        setDarkMode(schemeMedia.current.matches);
     }
 
     useLayoutEffect(() => {
-        schemeMedia.current.addEventListener('change', setSystemScheme);
+        if (!isBrowser || !schemeMedia.current) return;
+
+        const handler = (e: MediaQueryListEvent) => setDarkMode(e.matches);
+        schemeMedia.current.addEventListener('change', handler);
         return () => {
-            schemeMedia.current?.removeEventListener('change', setSystemScheme);
+            schemeMedia.current?.removeEventListener('change', handler);
         }
-    }, []);
+    }, [isBrowser]);
 
     return { switchMode, darkMode };
 }
