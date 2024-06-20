@@ -28,3 +28,14 @@ jobs:
       - name: Build project
         run: npm run build
         working-directory: ./packages/use-dark-mode
+
+      - name: Run tests
+        run: npm run test
+        working-directory: ./packages/use-dark-mode
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          flags: use-dark-mode
+        env: 
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
