@@ -1,5 +1,7 @@
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
 
+type Theme = 'light' | 'dark';
+
 type Mode = Theme | 'system';
 
 type Config = {
