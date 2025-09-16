@@ -8,7 +8,7 @@ import { useRef, useEffect } from 'react';
  */
 export function useDebounce<T extends any[]>(callback: (...args: T) => void, delay: number) {
     const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-    const callbackRef = useRef<Function>(callback);
+    const callbackRef = useRef<(...args: T) => void>(callback);
     const isMountedRef = useRef<boolean>(true);
 
     useEffect(() => {
@@ -19,7 +19,10 @@ export function useDebounce<T extends any[]>(callback: (...args: T) => void, del
         isMountedRef.current = true;
         return () => {
             isMountedRef.current = false;
-            timeoutRef.current && clearTimeout(timeoutRef.current);
+
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
         }
     }, [])
 
